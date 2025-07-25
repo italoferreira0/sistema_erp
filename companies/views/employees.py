@@ -43,7 +43,7 @@ class Employees(Base):
         
         return Response(signup_user, status=status.HTTP_400_BAD_REQUEST)
 
-class EmployeeDatail(Base):
+class EmployeeDetail(Base):
     permission_classes = [EmployeesPermission]
 
     def get(self, request, employee_id):
