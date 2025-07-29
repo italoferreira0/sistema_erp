@@ -125,7 +125,7 @@ class TaskSerializer(serializers.ModelSerializer):
     def get_status(self, obj):
         return obj.status.name
     
-    def get_status(self, obj):
+    def get_employee(self, obj):
         return EmployeesSerializer(obj.employee).data
     
     def update(self, instance, validated_data):

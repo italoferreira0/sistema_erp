@@ -13,7 +13,10 @@ class Base(APIView):
         if employee:
             return employee.enterprise.id
         
-        return owner.id
+        if owner:
+            return owner.id
+        
+        raise NotFoundEmployee
 
     def get_employee(self, employee_id, user_id):
         enterprise_id = self.get_enterprise_id(user_id)
